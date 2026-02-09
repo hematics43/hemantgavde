@@ -1,0 +1,57 @@
+:root {
+  --bg: #fdf6f0;
+  --text: #333;
+  --primary: #d2691e;
+  --card-bg: #fffaf0;
+}
+body.dark {
+  --bg: #1e1e1e;
+  --text: #f0f0f0;
+  --primary: #ff8c42;
+  --card-bg: #2e2e2e;
+}
+
+body {
+  margin:0;
+  font-family:'Segoe UI',Arial,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  scroll-behavior:smooth;
+}
+
+/* Header */
+header {background:var(--bg);padding:30px;text-align:center;position:sticky;top:0;z-index:1000;box-shadow:0 2px 8px rgba(0,0,0,0.1);}
+header h1{color:var(--primary);}
+header p{margin-top:5px;}
+#theme-toggle{position:absolute;top:20px;right:20px;padding:8px 12px;border:none;border-radius:5px;background:var(--primary);color:#fff;cursor:pointer;}
+
+/* Books */
+section#books{padding:40px 20px;text-align:center;}
+.book-list{display:flex;flex-wrap:wrap;gap:20px;justify-content:center;}
+.book{background:var(--card-bg);border-radius:10px;padding:15px;width:220px;text-align:center;transition:transform 0.3s,box-shadow 0.3s;}
+.book:hover{transform:translateY(-5px);box-shadow:0 10px 15px rgba(0,0,0,0.2);}
+.book img{width:100%;border-radius:5px;}
+.book h3{margin:10px 0 5px;}
+.book .description{font-size:0.95em;margin-bottom:10px;}
+.book .links a{margin:5px 5px 0 0;padding:5px 10px;background:var(--primary);color:#fff;text-decoration:none;border-radius:5px;}
+.book .links a:hover{background:#a0522d;}
+
+/* About Author */
+section#about{padding:40px 20px;text-align:center;}
+.author-container{display:flex;gap:20px;flex-wrap:wrap;justify-content:center;align-items:center;}
+.author-container img{width:200px;border-radius:10px;}
+.author-container p{max-width:600px;font-size:1.1em;}
+
+/* Contact */
+section#contact{padding:40px 20px;text-align:center;}
+section#contact a{color:var(--primary);text-decoration:none;}
+section#contact a:hover{text-decoration:underline;}
+
+/* Footer */
+footer{text-align:center;padding:20px;background:var(--card-bg);}
+
+/* Responsive */
+@media(max-width:768px){
+  .author-container{flex-direction:column;}
+  .book{width:160px;}
+}
