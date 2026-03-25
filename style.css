@@ -36,11 +36,36 @@ section#books{padding:40px 20px;text-align:center;}
 .book .links a{margin:5px 5px 0 0;padding:5px 10px;background:var(--primary);color:#fff;text-decoration:none;border-radius:5px;}
 .book .links a:hover{background:#a0522d;}
 
-/* About Author */
-section#about{padding:40px 20px;text-align:center;}
-.author-container{display:flex;gap:20px;flex-wrap:wrap;justify-content:center;align-items:center;}
-.author-container img{width:200px;border-radius:10px;}
-.author-container p{max-width:600px;font-size:1.1em;}
+#about {
+  padding: 50px;
+  background: #f9f9f9;
+  text-align: center;
+}
+
+.author-container {
+  max-width: 900px;
+  margin: auto;
+}
+
+.author-container img {
+  width: 180px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+/* Justify text */
+.colorful-text {
+  text-align: justify;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+/* Make every word colorful */
+.colorful-text span:nth-child(5n+1) { color: #ff5733; }
+.colorful-text span:nth-child(5n+2) { color: #33c1ff; }
+.colorful-text span:nth-child(5n+3) { color: #28a745; }
+.colorful-text span:nth-child(5n+4) { color: #ffc107; }
+.colorful-text span:nth-child(5n+5) { color: #9b59b6; }
 
 /* Contact */
 section#contact{padding:40px 20px;text-align:center;}
